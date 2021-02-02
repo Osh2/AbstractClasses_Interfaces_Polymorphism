@@ -34,4 +34,10 @@ public class PlaygroundTest {
         Visitor visitor = new Visitor(12, 3.11, 5.60);
         assertEquals(true, playground.isAllowedTo(visitor));
     }
+
+    @Test
+    public void visitorCantEnter() {
+        Visitor visitor = new Visitor(16, 3.11, 5.60);
+        assertEquals(false, playground.isAllowedTo(visitor));
+    }
 }
